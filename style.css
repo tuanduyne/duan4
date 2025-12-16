@@ -1,0 +1,135 @@
+/* HEADER */
+.header {
+  width: 100%;
+  height: 75px;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px; /* Giảm padding để không vỡ khi zoom */
+}
+
+.menu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Luôn full màn */
+  height: 60px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* canh giữa toàn bộ header */
+
+  z-index: 999;
+}
+
+/* Bên trong có 1 container để giữ bố cục */
+.menu-content {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* NAV */
+.nav-header ul {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-header ul li {
+  list-style: none;
+  padding: 10px 12px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.nav-header ul li:hover {
+  background-color: rgb(71, 197, 155);
+  border-radius: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* SEARCH COMPONENT */
+.search {
+  position: relative;
+}
+
+.search__wrapper {
+  position: relative;
+}
+
+.search__input {
+  height: 38px;
+  width: 220px;
+  padding: 0 40px 0 15px;
+  border: 2px solid #47c59b;
+  border-radius: 25px;
+  outline: none;
+  font-size: 15px;
+
+  transition: padding 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search__input:focus {
+  padding-left: 20px;
+  border-color: #47c59b;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(71, 197, 155, 0.5);
+}
+
+.search__input::placeholder {
+  transition: opacity 0.3s ease;
+}
+
+.search__input:focus::placeholder {
+  opacity: 0;
+}
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #47c59b;
+  font-size: 17px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.search__icon:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* BUTTON */
+
+.signin,
+.signup {
+  margin-left: -50px;
+  padding: 8px 18px;
+  border: 2px solid #47c59b;
+  background-color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.signin:hover,
+.signup:hover {
+  background-color: #47c59b;
+  color: white;
+}
+.signin {
+  margin-left: 20px;
+}

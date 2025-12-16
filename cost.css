@@ -1,0 +1,22 @@
+h1 {
+  margin: 30px 350px;
+  width: 70%;
+}
+.cost-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80vh;
+  margin: 180px auto;
+}
+
+.cost-container img {
+  width: 60%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  filter: contrast(1.05) saturate(1.1);
+}

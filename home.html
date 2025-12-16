@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="Vi">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Project Flim</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <div class="menu-header">
+          <div class="menu-content">
+            <img src="./img/logo (1).png" alt="logo" />
+
+            <nav class="nav-header">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="./cinema.html">Flim</a></li>
+                <li><a href="./cost-film.html">Cost</a></li>
+                <li><a href="./franchise.html">Franchise</a></li>
+                <li><a href="./member.html">Member</a></li>
+              </ul>
+            </nav>
+
+            <div class="search">
+              <div class="search__wrapper">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Search..."
+                />
+                <i class="fa-solid fa-magnifying-glass search__icon"></i>
+              </div>
+            </div>
+
+            <button class="signin">Sign In</button>
+            <button class="signup">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- code phần hero -->
+
+      <section class="hero">
+        <div class="hero__left">
+          <h1>GIỚI THIỆU</h1>
+        </div>
+        <div class="hero__right">
+          <div class="slider">
+            <div class="slides">
+              <img src="./img/1702wx621h-6-112546-051225-67.jpg" alt="" />
+              <img
+                src="./img/ctkm-quy-toc-choi-noel-1702x621-094354-051225-82.png"
+                alt=""
+              />
+              <img
+                src="./img/5cm-logo-localize-mkt-material-digital-1702x621-175006-011225-37.jpg"
+                alt=""
+              />
+              <img
+                src="./img/z7270472000826-32a59d8404631139144c3f2219346b24-101205-281125-55.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="movie-container">
+
+  <div class="movie-tabs">
+    <button class="tab active" data-target="now-showing">Phim đang chiếu</button>
+    <button class="tab" data-target="coming-soon">Phim sắp chiếu</button>
+    <button class="tab" data-target="special">Suất chiếu đặc biệt</button>
+  </div>
+  <div class="movie-content">
+
+    <!-- PHIM ĐANG CHIẾU -->
+    <div id="now-showing" class="content active">
+      <div class="container-card">
+
+        <div class="card">
+          <img src="./img/zootopia.png" alt="">
+          <div class="card-content">
+            <a href="">Phi Vụ Động Trời 2</a>
+            <p><b>Thể loại </b>: Hoạt hình</p>
+            <p><b>Thời lượng </b>: 107 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/hoangtuquy.png" alt="">
+          <div class="card-content">
+            <a href="">Hoàng Tử Quỷ</a>
+            <p><b>Thể loại </b>: Kinh dị</p>
+            <p><b>Thời lượng </b>: 117 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/avt.png" alt="">
+          <div class="card-content">
+            <a href="">Avatar : Lửa Và Tro Tàn</a>
+            <p><b>Thể loại </b>: Khoa học , Viễn tưởng</p>
+            <p><b>Thời lượng </b>: 197 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/kynam.jpg" alt="">
+          <div class="card-content">
+            <a href="">Quán Kỳ Nam</a>
+            <p><b>Thể loại </b>: Lãng mạn, Tâm lý</p>
+            <p><b>Thời lượng </b>: 135 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/longdienhuong.jpg" alt="">
+          <div class="card-content">
+            <a href="">Truy Tìm Long Diên Hương</a>
+            <p><b>Thể loại </b>: Hành động, Hài hước</p>
+            <p><b>Thời lượng </b>: 103 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/5cm.png" alt="">
+          <div class="card-content">
+            <a href="">5 Centimet Trên Giây</a>
+            <p><b>Thể loại </b>: Tình cảm, Hoạt hình</p>
+            <p><b>Thời lượng </b>: 76 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/khunglong.png" alt="">
+          <div class="card-content">
+            <a href="">Anh Trai Tôi Là Khủng Long</a>
+            <p><b>Thể loại </b>: Hoạt hình, Thần thoại</p>
+            <p><b>Thời lượng </b>: 95 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/chuthuat.jpg" alt="">
+          <div class="card-content">
+            <a href="">Chú Thuật Hồi Chiến</a>
+            <p><b>Thể loại </b>: Hành động, Hoạt hình</p>
+            <p><b>Thời lượng </b>: 88 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/khuanh.png" alt="">
+          <div class="card-content">
+            <a href="">Em Sẽ Khử Anh</a>
+            <p><b>Thể loại </b>: Giật gân, Hài hước</p>
+            <p><b>Thời lượng </b>: 118 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/2chu.png" alt="">
+          <div class="card-content">
+            <a href="">Nhà Hai Chủ</a>
+            <p><b>Thể loại </b>: Kinh dị</p>
+            <p><b>Thời lượng </b>: 102 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/tro.jpg" alt="">
+          <div class="card-content">
+            <a href="">Phòng Trọ Ma Bầu</a>
+            <p><b>Thể loại </b>: Kinh dị, Hài hước</p>
+            <p><b>Thời lượng </b>: 101 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/thkt.png" alt="">
+          <div class="card-content">
+            <a href="">Thế Hệ Kỳ Tích</a>
+            <p><b>Thể loại </b>: Gia đình, Tâm lý</p>
+            <p><b>Thời lượng </b>: 124 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/ttqq.jpg" alt="">
+          <div class="card-content">
+            <a href="">Trái Tim Què Quặt</a>
+            <p><b>Thể loại </b>: Hồi hộp, Ly kỳ, Tâm lý</p>
+            <p><b>Thời lượng </b>: 102 phút</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./img/vccv.png" alt="">
+          <div class="card-content">
+            <a href="">Vua Của Các Vua</a>
+            <p><b>Thể loại </b>: Hoạt hình, Gia đình</p>
+            <p><b>Thời lượng </b>: 101 phút</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- PHIM SẮP CHIẾU -->
+    <div id="coming-soon" class="content">
+      <div class="container-card">
+       <div class="card">
+          <img src="./img/mp.png" alt="">
+          <div class="card-content">
+            <a href="">Mùi Phở</a>
+            <p><b>Thể loại </b>: Hài hước, Tình cảm, Gia đình</p>
+            <p><b>Thời lượng </b>: 106 phút</p>
+            <p><b>Ngày khởi chiếu </b>:  <span>17/02/2026</span> </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/dcsv.jpg" alt="">
+          <div class="card-content">
+            <a href="">Đứa Con Sau Vườn</a>
+            <p><b>Thể loại </b>: Kinh dị</p>
+            <p><b>Thời lượng </b>: 88 phút</p>
+            <p><b>Ngày khởi chiếu </b>:  <span>19/12/2025</span> </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/hg.jpg" alt="">
+          <div class="card-content">
+            <a href="">Cô Hầu Gái</a>
+            <p><b>Thể loại </b>:Bí ẩn, Giật gân</p>
+            <p><b>Thời lượng </b>: 131 phút</p>
+            <p><b>Ngày khởi chiếu </b>:  <span>26/12/2025</span></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/tdm.jpg" alt="">
+          <div class="card-content">
+            <a href="">Thiên Đường Máu</a>
+            <p><b>Thể loại </b>: Hành động</p>
+            <p><b>Thời lượng </b>: 120 phút</p>
+            <p><b>Ngày khởi chiếu </b>:  <span>31/12/2025</span> </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/atam.jpg" alt="">
+          <div class="card-content">
+            <a href="">Ai Thương Ai Mến</a>
+            <p><b>Thể loại </b>: Hài hước, Gia đình</p>
+            <p><b>Thời lượng </b>: 112 phút</p>
+            <p><b>Ngày khởi chiếu </b>:  <span>01/01/2026</span> </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/ckbn.jpg" alt="">
+          <div class="card-content">
+            <a href="">Con Kể Ba Nghe</a>
+            <p><b>Thể loại </b>: Tâm lý, Gia đình</p>
+            <p><b>Thời lượng </b>: 120 phút</p>
+            <p><b>Ngày khởi chiếu </b>:  <span>16/01/2026</span> </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <!-- SUẤT CHIẾU ĐẶC BIỆT -->
+    <div id="special" class="content">
+      <div class="container-card">
+        <div class="card">
+          <img src="./img/avt.png" alt="">
+          <div class="card-content">
+            <a href="">Avatar: Lửa Và Tro Tàn</a>
+            <p><b>Thể loại </b>:Khoa học, Viễn tưởng</p>
+            <p><b>Thời lượng </b>: 197 phút</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/2chu.png" alt="">
+          <div class="card-content">
+            <a href="">Nhà Hai Chủ</a>
+            <p><b>Thể loại </b>:Kinh dị</p>
+            <p><b>Thời lượng </b>: 102 phút</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+</div>
+
+    </main>
+    <script src="java.js"></script>
+  </body>
+</html>
