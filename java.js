@@ -48,3 +48,51 @@ buttons.forEach(btn => {
       .classList.add("active");
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".menu-toggle i");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("overlay");
+
+  function closeMenu() {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+    toggle.classList.remove("fa-xmark");
+    toggle.classList.add("fa-bars");
+  }
+
+  toggle.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    if (isOpen) {
+      toggle.classList.remove("fa-bars");
+      toggle.classList.add("fa-xmark");
+    } else {
+      closeMenu();
+    }
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".menu-header");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScrollY && currentScroll > 80) {
+      // scroll xuống
+      header.classList.add("hide");
+    } else {
+      // scroll lên
+      header.classList.remove("hide");
+    }
+
+    lastScrollY = currentScroll;
+  });
+});
