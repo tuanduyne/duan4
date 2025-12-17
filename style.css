@@ -1,43 +1,41 @@
+/* ===================== */
 /* HEADER */
+/* ===================== */
 .header {
   width: 100%;
   height: 75px;
-}
-
-.header-container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px; /* Giảm padding để không vỡ khi zoom */
 }
 
 .menu-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Luôn full màn */
+  width: 100%;
   height: 60px;
-
   background: white;
-
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center; /* canh giữa toàn bộ header */
-
   z-index: 999;
+  transition: transform 0.35s ease;
 }
 
-/* Bên trong có 1 container để giữ bố cục */
+.menu-header.hide {
+  transform: translateY(-100%);
+}
+
 .menu-content {
   width: 100%;
   max-width: 1440px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
-/* NAV */
+/* ===================== */
+/* NAV DESKTOP */
+/* ===================== */
 .nav-header ul {
   display: flex;
   gap: 30px;
@@ -45,9 +43,15 @@
 
 .nav-header ul li {
   list-style: none;
-  padding: 10px 12px;
   font-size: 18px;
   transition: background 0.3s ease;
+}
+
+.nav-header ul li a {
+  display: block;
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
 }
 
 .nav-header ul li:hover {
@@ -55,17 +59,10 @@
   border-radius: 5px;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-}
-
-/* SEARCH COMPONENT */
+/* ===================== */
+/* SEARCH */
+/* ===================== */
 .search {
-  position: relative;
-}
-
-.search__wrapper {
   position: relative;
 }
 
@@ -77,23 +74,12 @@ a {
   border-radius: 25px;
   outline: none;
   font-size: 15px;
-
-  transition: padding 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search__input:focus {
   padding-left: 20px;
-  border-color: #47c59b;
-  background-color: #fff;
   box-shadow: 0 0 8px rgba(71, 197, 155, 0.5);
-}
-
-.search__input::placeholder {
-  transition: opacity 0.3s ease;
-}
-
-.search__input:focus::placeholder {
-  opacity: 0;
 }
 
 .search__icon {
@@ -102,9 +88,7 @@ a {
   right: 12px;
   transform: translateY(-50%);
   color: #47c59b;
-  font-size: 17px;
   cursor: pointer;
-
   transition: transform 0.2s ease;
 }
 
@@ -112,94 +96,41 @@ a {
   transform: translateY(-50%) scale(1.2);
 }
 
-/* BUTTON */
-
+/* ===================== */
+/* AUTH BUTTON */
+/* ===================== */
 .signin,
 .signup {
-  margin-left: 2px;
   padding: 8px 18px;
   border: 2px solid #47c59b;
   background-color: white;
   border-radius: 12px;
-  cursor: pointer;
   font-weight: 700;
+  cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
+
 .signin:hover,
 .signup:hover {
   background-color: #47c59b;
   color: white;
 }
+
 .signin {
   margin-left: 20px;
 }
 
 /* ===================== */
-/* TOGGLE BUTTON */
+/* TOGGLE */
 /* ===================== */
 .menu-toggle {
   display: none;
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
   color: #47c59b;
+  z-index: 999;
 }
 
-/* ===================== */
-/* MOBILE MENU */
-/* ===================== */
-.mobile-menu {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-
-  transition: max-height 0.4s ease, opacity 0.3s ease;
-  z-index: 998;
-}
-
-.mobile-menu.active {
-  max-height: 400px;
-  opacity: 1;
-}
-
-.mobile-menu ul {
-  list-style: none;
-  padding: 20px;
-}
-
-.mobile-menu ul li {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.mobile-menu ul li a {
-  font-size: 18px;
-  font-weight: 600;
-  color: black;
-}
-@media (max-width: 768px) {
-  .nav-header {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .search,
-  .auth {
-    display: none;
-  }
-}
-.menu-toggle {
-  display: none;
-}
 /* ===================== */
 /* OVERLAY */
 /* ===================== */
@@ -219,7 +150,7 @@ a {
 }
 
 /* ===================== */
-/* MOBILE MENU - SLIDE LEFT */
+/* MOBILE MENU (SLIDE LEFT) */
 /* ===================== */
 .mobile-menu {
   position: fixed;
@@ -245,14 +176,17 @@ a {
 }
 
 .mobile-menu ul li {
-  position: relative; /* ← THÊM DÒNG NÀY */
+  position: relative;
   padding: 14px 0;
   border-bottom: 1px solid #eee;
   overflow: hidden;
 }
+
 .mobile-menu ul li a {
   display: block;
-  padding-left: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
   transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
@@ -261,10 +195,21 @@ a {
   color: #47c59b;
 }
 
-.mobile-menu ul li a {
-  font-size: 18px;
-  font-weight: 600;
-  color: black;
+.mobile-menu ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #47c59b;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu ul li:hover::before,
+.mobile-menu ul li.active::before {
+  transform: scaleY(1);
 }
 
 /* ===================== */
@@ -279,42 +224,5 @@ a {
 
   .menu-toggle {
     display: block;
-    font-size: 24px;
-    cursor: pointer;
-    color: #47c59b;
-    z-index: 999;
   }
-}
-.menu-header {
-  transition: transform 0.35s ease;
-}
-
-.menu-header.hide {
-  transform: translateY(-100%);
-}
-.mobile-menu ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background-color: #47c59b;
-  transform: scaleY(0);
-  transition: transform 0.3s ease;
-}
-
-.mobile-menu ul li:hover::before {
-  transform: scaleY(1);
-}
-.mobile-menu ul li.active a {
-  color: #47c59b;
-  font-weight: 700;
-}
-
-.mobile-menu ul li.active::before {
-  transform: scaleY(1);
-}
-.mobile-menu ul li:active {
-  background-color: rgba(71, 197, 155, 0.1);
 }

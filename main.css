@@ -232,3 +232,139 @@ main {
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* =========================
+   HERO FIX
+========================= */
+.hero {
+  height: auto;
+  min-height: 400px;
+  max-height: none;
+}
+
+.hero-section {
+  position: relative;
+  height: auto;
+  padding: 40px 20px;
+}
+
+.hero-section h1 {
+  position: static;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   SLIDER FIX
+========================= */
+.slider {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.slides img {
+  height: 100%;
+}
+
+/* =========================
+   MOVIE CONTAINER
+========================= */
+.movie-container {
+  padding: 0 16px;
+}
+
+.movie-tabs {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-tabs .tab {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* =========================
+   CARD GRID FIX
+========================= */
+.container-card {
+  gap: 24px;
+}
+
+.card {
+  max-width: 200px;
+}
+
+/* =========================
+   TEXT SCALE
+========================= */
+.name-cinema {
+  font-size: 32px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .card {
+    max-width: 180px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 28px;
+  }
+
+  .slider {
+    max-width: 100%;
+  }
+
+  .container-card {
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 160px;
+  }
+
+  .name-cinema {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 24px;
+  }
+
+  .movie-tabs {
+    gap: 8px;
+  }
+
+  .movie-tabs .tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container-card {
+    gap: 16px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    max-width: 100%;
+  }
+}

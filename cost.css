@@ -1,16 +1,26 @@
+/* ================= */
+/* TITLE */
+/* ================= */
 h1 {
-  margin: 30px 350px;
+  margin: 40px auto;
   width: 70%;
+  text-align: center;
 }
+
+/* ================= */
+/* CONTAINER */
+/* ================= */
 .cost-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 80vh;
-  margin: 180px auto;
+  margin: 120px auto;
 }
 
+/* ================= */
+/* IMAGE */
+/* ================= */
 .cost-container img {
   width: 60%;
   height: auto;
@@ -19,4 +29,43 @@ h1 {
     0 25px 60px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(255, 255, 255, 0.08);
   filter: contrast(1.05) saturate(1.1);
+}
+
+/* ================= */
+/* TABLET */
+/* ================= */
+@media (max-width: 1024px) {
+  h1 {
+    width: 85%;
+  }
+
+  .cost-container {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .cost-container img {
+    width: 80%;
+  }
+}
+
+/* ================= */
+/* MOBILE */
+/* ================= */
+@media (max-width: 768px) {
+  h1 {
+    width: 90%;
+    margin: 30px auto;
+    font-size: 22px;
+  }
+
+  .cost-container {
+    width: 100%;
+    margin: 60px auto;
+  }
+
+  .cost-container img {
+    width: 92%;
+    border-radius: 14px;
+  }
 }

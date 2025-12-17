@@ -96,3 +96,18 @@ document.addEventListener("DOMContentLoaded", () => {
     lastScrollY = currentScroll;
   });
 });
+fetch("footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("footer").innerHTML = html;
+  });
+  const ftMidTitle = document.querySelector(".ft-mid h4");
+const ftMid = document.querySelector(".ft-mid");
+
+if (ftMidTitle) {
+  ftMidTitle.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      ftMid.classList.toggle("active");
+    }
+  });
+}

@@ -3,7 +3,6 @@
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
-  height: 90vh;
   border-radius: 12px;
   box-shadow: 3 3 3px rgba(0, 0, 0, 0.2);
   gap: 30px;
@@ -65,4 +64,68 @@ h1 {
     transform: scale(1.05);
   transition: transform 0.3s ease;
   transform: translateY(-6px);
+}
+/* ================= */
+/* FIX NHẸ */
+/* ================= */
+.card-cinema:hover {
+  transform: translateY(-6px) scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* ================= */
+/* TABLET */
+/* ================= */
+@media (max-width: 1024px) {
+  .cinema-content {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .cinema-content-left {
+    width: 45%;
+  }
+
+  .row {
+    gap: 60px;
+  }
+
+  .row img {
+    width: 150%;
+  }
+}
+
+/* ================= */
+/* MOBILE */
+/* ================= */
+@media (max-width: 768px) {
+  .cinema-content {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .cinema-content-left,
+  .cinema-content-right {
+    width: 100%;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .card-cinema {
+    width: 120px;
+    margin-left: 0;
+  }
+
+  .row img {
+    width: 100%;
+  }
 }
